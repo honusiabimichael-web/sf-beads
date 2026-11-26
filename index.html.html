@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SF Beads & Accessories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#fff8f0}
+header{background:#4a1d5a;color:white;padding:25px;text-align:center}
+.logo{border:3px solid gold;display:inline-block;padding:12px 35px;border-radius:50%;background:white;color:#4a1d5a}
+.logo h1{margin:0;font-size:45px}
+.logo p{margin:0;font-size:20px;line-height:1.2}
+.page{display:none;background:white;margin:20px;padding:20px;border-radius:12px;min-height:400px}
+.page.active{display:block}
+h2{color:#4a1d5a;border-bottom:3px solid gold;padding-bottom:5px}
+.products{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.card{border:1px solid #ddd;width:260px;padding:15px;border-radius:12px;text-align:center}
+.pic-box{width:100%;height:210px;background:#eee;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;border:2px dashed #4a1d5a;overflow:hidden}
+.pic-box img{width:100%;height:100%;object-fit:cover;display:none}
+.pic-box span{font-size:14px;color:#4a1d5a;padding:10px}
+.price{color:green;font-weight:bold;font-size:20px}
+label{display:block;margin-top:10px;text-align:left;font-size:14px}
+input,select{width:100%;padding:9px;margin-top:3px;box-sizing:border-box}
+button{background:#4a1d5a;color:white;padding:12px 25px;border:none;margin:10px 5px;cursor:pointer;border-radius:6px;font-size:16px}
+button.next{background:gold;color:#4a1d5a;font-weight:bold}
+.nav-buttons{text-align:center;margin:20px}
+.hero{text-align:center}
+.hero-box{display:inline-block;background:#fff3cd;padding:20px 50px;border-radius:15px}
+.contact-box{background:#fff3cd;padding:20px;border-radius:10px;font-size:18px;line-height:1.8}
+.page-number{text-align:center;color:#888;margin-top:10px}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo"><h1>SF</h1><p>Beads &<br>Accessories</p></div>
+<p>Beautiful Beads. Good Quality. Good Price.</p>
+</header>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+<div class="hero"><div class="hero-box">
+<h2>Welcome to SF Beads & Accessories</h2>
+<p><b>We Deal In:</b></p>
+<p>✨ Bracelets</p><p>✨ Necklace</p><p>✨ Shirts & Shorts</p><p>✨ Shoes</p>
+<p>Press NEXT to see our products</p>
+</div></div>
+<p class="page-number">Page 1 of 7</p>
+</div>
+
+<!-- PAGE 2: BRACELETS -->
+<div class="page" id="page2">
+<h2>Page 2: Bracelets</h2>
+<div class="products">
+
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-b1').click()">
+<img id="img-b1"><span id="text-b1">📷 Click Here<br>To Insert Picture<br>of Bracelet 1</span>
+</div>
+<input type="file" id="file-b1" accept="image/*" style="display:none" onchange="showPic(this,'img-b1','text-b1')">
+<h3>Bracelet 1</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 40"></label>
+<label>Size: <select><option>Small</option><option>Medium</option><option>Large</option></select></label>
+<label>Colour: <input type="text" placeholder="e.g. Gold"></label>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-b2').click()">
+<img id="img-b2"><span id="text-b2">📷 Click Here<br>To Insert Picture<br>of Bracelet 2</span>
+</div>
+<input type="file" id="file-b2" accept="image/*" style="display:none" onchange="showPic(this,'img-b2','text-b2')">
+<h3>Bracelet 2</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 50"></label>
+<label>Size: <select><option>Small</option><option>Medium</option><option>Large</option></select></label>
+<label>Colour: <input type="text" placeholder="e.g. Blue"></label>
+<button>Order Now</button>
+</div>
+
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-b3').click()">
+<img id="img-b3"><span id="text-b3">📷 Click Here<br>To Insert Picture<br>of Bracelet 3</span>
+</div>
+<input type="file" id="file-b3" accept="image/*" style="display:none" onchange="showPic(this,'img-b3','text-b3')">
+<h3>Bracelet 3</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 60"></label>
+<label>Size: <select><option>Small</option><option>Medium</option><option>Large</option></select></label>
+<label>Colour: <input type="text" placeholder="e.g. Red"></label>
+<button>Order Now</button>
+</div>
+
+</div>
+<p class="page-number">Page 2 of 7</p>
+</div>
+
+<!-- PAGE 3: NECKLACE -->
+<div class="page" id="page3">
+<h2>Page 3: Necklace</h2>
+<div class="products">
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-n1').click()"><img id="img-n1"><span id="text-n1">📷 Click Here<br>To Insert Picture<br>of Necklace 1</span></div>
+<input type="file" id="file-n1" accept="image/*" style="display:none" onchange="showPic(this,'img-n1','text-n1')">
+<h3>Necklace 1</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 80"></label><label>Size: <select><option>Small</option><option>Medium</option><option>Large</option></select></label><label>Colour: <input type="text" placeholder="e.g. Gold"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-n2').click()"><img id="img-n2"><span id="text-n2">📷 Click Here<br>To Insert Picture<br>of Necklace 2</span></div>
+<input type="file" id="file-n2" accept="image/*" style="display:none" onchange="showPic(this,'img-n2','text-n2')">
+<h3>Necklace 2</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 100"></label><label>Size: <select><option>Small</option><option>Medium</option><option>Large</option></select></label><label>Colour: <input type="text" placeholder="e.g. Silver"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-n3').click()"><img id="img-n3"><span id="text-n3">📷 Click Here<br>To Insert Picture<br>of Necklace 3</span></div>
+<input type="file" id="file-n3" accept="image/*" style="display:none" onchange="showPic(this,'img-n3','text-n3')">
+<h3>Necklace 3</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 120"></label><label>Size: <select><option>Small</option><option>Medium</option><option>Large</option></select></label><label>Colour: <input type="text" placeholder="e.g. Black"></label><button>Order Now</button>
+</div>
+</div>
+<p class="page-number">Page 3 of 7</p>
+</div>
+
+<!-- PAGE 4: SHIRTS AND SHORTS -->
+<div class="page" id="page4">
+<h2>Page 4: Shirts and Shorts</h2>
+<div class="products">
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-s1').click()"><img id="img-s1"><span id="text-s1">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-s1" accept="image/*" style="display:none" onchange="showPic(this,'img-s1','text-s1')">
+<h3>Shirt & Shorts Set 1</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 120"></label><label>Size: <select><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><label>Colour: <input type="text" placeholder="e.g. Blue"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-s2').click()"><img id="img-s2"><span id="text-s2">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-s2" accept="image/*" style="display:none" onchange="showPic(this,'img-s2','text-s2')">
+<h3>Shirt & Shorts Set 2</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 150"></label><label>Size: <select><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><label>Colour: <input type="text" placeholder="e.g. White"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-s3').click()"><img id="img-s3"><span id="text-s3">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-s3" accept="image/*" style="display:none" onchange="showPic(this,'img-s3','text-s3')">
+<h3>Shirt & Shorts Set 3</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 180"></label><label>Size: <select><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><label>Colour: <input type="text" placeholder="e.g. Black"></label><button>Order Now</button>
+</div>
+</div>
+<p class="page-number">Page 4 of 7</p>
+</div>
+
+<!-- PAGE 5: SHORTS -->
+<div class="page" id="page5">
+<h2>Page 5: Shorts</h2>
+<div class="products">
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-sh1').click()"><img id="img-sh1"><span id="text-sh1">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-sh1" accept="image/*" style="display:none" onchange="showPic(this,'img-sh1','text-sh1')">
+<h3>Shorts 1</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 70"></label><label>Size: <select><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><label>Colour: <input type="text" placeholder="e.g. Black"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-sh2').click()"><img id="img-sh2"><span id="text-sh2">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-sh2" accept="image/*" style="display:none" onchange="showPic(this,'img-sh2','text-sh2')">
+<h3>Shorts 2</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 90"></label><label>Size: <select><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><label>Colour: <input type="text" placeholder="e.g. Brown"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-sh3').click()"><img id="img-sh3"><span id="text-sh3">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-sh3" accept="image/*" style="display:none" onchange="showPic(this,'img-sh3','text-sh3')">
+<h3>Shorts 3</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 100"></label><label>Size: <select><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><label>Colour: <input type="text" placeholder="e.g. Blue"></label><button>Order Now</button>
+</div>
+</div>
+<p class="page-number">Page 5 of 7</p>
+</div>
+
+<!-- PAGE 6: SHOES -->
+<div class="page" id="page6">
+<h2>Page 6: Shoes</h2>
+<div class="products">
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-shoe1').click()"><img id="img-shoe1"><span id="text-shoe1">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-shoe1" accept="image/*" style="display:none" onchange="showPic(this,'img-shoe1','text-shoe1')">
+<h3>Shoes 1</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 200"></label><label>Size: <select><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option></select></label><label>Colour: <input type="text" placeholder="e.g. Black"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-shoe2').click()"><img id="img-shoe2"><span id="text-shoe2">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-shoe2" accept="image/*" style="display:none" onchange="showPic(this,'img-shoe2','text-shoe2')">
+<h3>Shoes 2</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 250"></label><label>Size: <select><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option></select></label><label>Colour: <input type="text" placeholder="e.g. White"></label><button>Order Now</button>
+</div>
+<div class="card">
+<div class="pic-box" onclick="document.getElementById('file-shoe3').click()"><img id="img-shoe3"><span id="text-shoe3">📷 Click Here<br>To Insert Picture</span></div>
+<input type="file" id="file-shoe3" accept="image/*" style="display:none" onchange="showPic(this,'img-shoe3','text-shoe3')">
+<h3>Shoes 3</h3><p class="price">Price: GH₵ ___</p>
+<label>Price: <input type="text" placeholder="e.g. 300"></label><label>Size: <select><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option></select></label><label>Colour: <input type="text" placeholder="e.g. Brown"></label><button>Order Now</button>
+</div>
+</div>
+<p class="page-number">Page 6 of 7</p>
+</div>
+
+<!-- PAGE 7: CONTACT -->
+<div class="page" id="page7">
+<h2>Page 7: Contact</h2>
+<div class="contact-box">
+<p><b>Shop Name:</b> SF Beads & Accessories</p>
+<p><b>Contact:</b> 0530142170</p>
+<p><b>Location:</b> Juapong, Volta Region, Ghana</p>
+<p><b>Address:</b> Mataheko, Dorsee Road: KT-0427</p>
+<br>
+<a href="tel:0530142170"><button>📞 Call Us Now</button></a>
+<a href="https://wa.me/233530142170"><button class="next">💬 WhatsApp Us</button></a>
+<br><br>
+<label>Your Name: <input type="text" placeholder="Type your name"></label>
+<label>What do you want to buy? <input type="text" placeholder="e.g. Gold Bracelet"></label>
+<button>Send Message</button>
+</div>
+<p class="page-number">Page 7 of 7</p>
+</div>
+
+<div class="nav-buttons">
+<button onclick="prevPage()">⬅ Previous Page</button>
+<button class="next" onclick="nextPage()">Next Page ➡</button>
+<br><button onclick="goHome()">🏠 Home</button>
+</div>
+
+<script>
+let current = 1;
+let total = 7;
+function showPage(n){
+  for(let i=1;i<=total;i++){ document.getElementById('page'+i).classList.remove('active'); }
+  document.getElementById('page'+n).classList.add('active');
+  window.scrollTo(0,0);
+}
+function nextPage(){ if(current < total){ current++; showPage(current); } }
+function prevPage(){ if(current > 1){ current--; showPage(current); } }
+function goHome(){ current=1; showPage(current); }
+
+// THIS MAKES THE PICTURE PICKER WORK
+function showPic(input, imgId, textId){
+  if(input.files && input.files[0]){
+    let reader = new FileReader();
+    reader.onload = function(e){
+      let img = document.getElementById(imgId);
+      img.src = e.target.result;
+      img.style.display = 'block';
+      document.getElementById(textId).style.display = 'none';
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
+
+</body>
+</html>
